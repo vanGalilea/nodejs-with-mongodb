@@ -6,6 +6,4 @@ let ProductSchema = new Schema({
     price: {type: Number, required: true},
 });
 
-mongoose.model('Product', ProductSchema);
-
-export default mongoose;
+export default mongoose.model('Product', ProductSchema);
