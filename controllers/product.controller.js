@@ -13,3 +13,10 @@ exports.create = (req, res)=> {
         res.send('Product Created successfully')
     })
 };
+
+exports.find = (req, res)=> {
+    Product.findById(req.params.id, (err, product)=> {
+        if (err) return next(err);
+        res.send(product);
+    })
+};
